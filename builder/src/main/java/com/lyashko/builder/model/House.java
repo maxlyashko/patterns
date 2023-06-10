@@ -1,6 +1,6 @@
 package com.lyashko.builder.model;
 
-public class House {
+public abstract class House {
     private String foundation;
     private String structure;
     private String roof;
@@ -24,8 +24,7 @@ public class House {
 
     @Override
     public String toString() {
-        return "House:\n" +
-                "Foundation: " + foundation + "\n" +
+        return "Foundation: " + foundation + "\n" +
                 "Structure: " + structure + "\n" +
                 "Roof: " + roof + "\n" +
                 "Interior: " + interior;

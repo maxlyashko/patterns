@@ -1,23 +1,23 @@
 package com.lyashko.builder.service;
 
 import com.lyashko.builder.interfaces.HouseBuilder;
-import com.lyashko.builder.model.House;
+import com.lyashko.builder.interfaces.impl.EcoHouseBuilder;
+import com.lyashko.builder.interfaces.impl.ModernHouseBuilder;
+import com.lyashko.builder.interfaces.impl.TraditionalHouseBuilder;
+import com.lyashko.builder.model.EcoHouse;
+import com.lyashko.builder.model.ModernHouse;
+import com.lyashko.builder.model.TraditionalHouse;
 
 public class HouseDirectorService {
-    private HouseBuilder houseBuilder;
-
-    public HouseDirectorService(HouseBuilder houseBuilder) {
-        this.houseBuilder = houseBuilder;
+    public static HouseBuilder<ModernHouse> buildModernHouse() {
+        return new ModernHouseBuilder();
     }
 
-    public void constructHouse() {
-        houseBuilder.buildFoundation();
-        houseBuilder.buildStructure();
-        houseBuilder.buildRoof();
-        houseBuilder.buildInterior();
+    public static HouseBuilder<TraditionalHouse> buildTraditionalHouse() {
+        return new TraditionalHouseBuilder();
     }
 
-    public House getHouse() {
-        return houseBuilder.getHouse();
+    public static HouseBuilder<EcoHouse> buildEcoHouse() {
+        return new EcoHouseBuilder();
     }
 }

@@ -1,37 +1,41 @@
 package com.lyashko.builder.interfaces.impl;
 
 import com.lyashko.builder.interfaces.HouseBuilder;
-import com.lyashko.builder.model.House;
+import com.lyashko.builder.model.ModernHouse;
 
-public class ModernHouseBuilder implements HouseBuilder {
-    private House house;
+public class ModernHouseBuilder implements HouseBuilder<ModernHouse> {
+    private ModernHouse modernHouse;
 
     public ModernHouseBuilder() {
-        this.house = new House();
+        this.modernHouse = new ModernHouse();
     }
 
     @Override
-    public void buildFoundation() {
-        house.setFoundation("Modern foundation");
+    public HouseBuilder<ModernHouse> buildFoundation() {
+        modernHouse.setFoundation("Modern Foundation");
+        return this;
     }
 
     @Override
-    public void buildStructure() {
-        house.setStructure("Modern structure");
+    public HouseBuilder<ModernHouse> buildStructure() {
+        modernHouse.setStructure("Modern Structure");
+        return this;
     }
 
     @Override
-    public void buildRoof() {
-        house.setRoof("Modern roof");
+    public HouseBuilder<ModernHouse> buildRoof() {
+        modernHouse.setRoof("Modern Roof");
+        return this;
     }
 
     @Override
-    public void buildInterior() {
-        house.setInterior("Modern interior");
+    public HouseBuilder<ModernHouse> buildInterior() {
+        modernHouse.setInterior("Modern Interior");
+        return this;
     }
 
     @Override
-    public House getHouse() {
-        return house;
+    public ModernHouse getHouse() {
+        return modernHouse;
     }
 }

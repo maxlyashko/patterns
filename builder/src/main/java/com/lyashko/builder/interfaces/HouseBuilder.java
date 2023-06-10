@@ -2,14 +2,14 @@ package com.lyashko.builder.interfaces;
 
 import com.lyashko.builder.model.House;
 
-public interface HouseBuilder {
-    void buildFoundation();
+public interface HouseBuilder <T extends House> {
+    HouseBuilder<T> buildFoundation();
 
-    void buildStructure();
+    HouseBuilder<T> buildStructure();
 
-    void buildRoof();
+    HouseBuilder<T> buildRoof();
 
-    void buildInterior();
+    HouseBuilder<T> buildInterior();
 
-    House getHouse();
+    T getHouse();
 }

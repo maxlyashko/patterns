@@ -1,37 +1,41 @@
 package com.lyashko.builder.interfaces.impl;
 
 import com.lyashko.builder.interfaces.HouseBuilder;
-import com.lyashko.builder.model.House;
+import com.lyashko.builder.model.EcoHouse;
 
-public class EcoHouseBuilder implements HouseBuilder {
-    private House house;
+public class EcoHouseBuilder implements HouseBuilder<EcoHouse> {
+    private EcoHouse ecoHouse;
 
     public EcoHouseBuilder() {
-        this.house = new House();
+        this.ecoHouse = new EcoHouse();
     }
 
     @Override
-    public void buildFoundation() {
-        house.setFoundation("Eco foundation");
+    public HouseBuilder<EcoHouse> buildFoundation() {
+        ecoHouse.setFoundation("Eco Foundation");
+        return this;
     }
 
     @Override
-    public void buildStructure() {
-        house.setStructure("Eco structure");
+    public HouseBuilder<EcoHouse> buildStructure() {
+        ecoHouse.setStructure("Eco Structure");
+        return this;
     }
 
     @Override
-    public void buildRoof() {
-        house.setRoof("Eco roof");
+    public HouseBuilder<EcoHouse> buildRoof() {
+        ecoHouse.setRoof("Eco Roof");
+        return this;
     }
 
     @Override
-    public void buildInterior() {
-        house.setInterior("Eco interior");
+    public HouseBuilder<EcoHouse> buildInterior() {
+        ecoHouse.setInterior("Eco Interior");
+        return this;
     }
 
     @Override
-    public House getHouse() {
-        return house;
+    public EcoHouse getHouse() {
+        return ecoHouse;
     }
 }
