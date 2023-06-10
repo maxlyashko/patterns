@@ -9,15 +9,15 @@ import com.lyashko.builder.model.ModernHouse;
 import com.lyashko.builder.model.TraditionalHouse;
 
 public class HouseDirectorService {
-    public static HouseBuilder<ModernHouse> buildModernHouse() {
+    public static HouseBuilder<ModernHouse, ModernHouseBuilder> buildModernHouse() {
         return new ModernHouseBuilder();
     }
 
-    public static HouseBuilder<TraditionalHouse> buildTraditionalHouse() {
+    public static HouseBuilder<TraditionalHouse, TraditionalHouseBuilder> buildTraditionalHouse() {
         return new TraditionalHouseBuilder();
     }
 
-    public static HouseBuilder<EcoHouse> buildEcoHouse() {
+    public static HouseBuilder<EcoHouse, EcoHouseBuilder> buildEcoHouse() {
         return new EcoHouseBuilder();
     }
 }

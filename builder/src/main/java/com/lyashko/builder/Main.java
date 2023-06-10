@@ -12,6 +12,7 @@ public class Main {
                 .buildStructure()
                 .buildRoof()
                 .buildInterior()
+                .buildModernThing()
                 .getHouse();
         System.out.println("Modern House:");
         System.out.println(modernHouse);
@@ -21,6 +22,7 @@ public class Main {
                 .buildStructure()
                 .buildRoof()
                 .buildInterior()
+                .buildTraditionalThing()
                 .getHouse();
         System.out.println("\nTraditional House:");
         System.out.println(traditionalHouse);
@@ -30,6 +32,7 @@ public class Main {
                 .buildStructure()
                 .buildRoof()
                 .buildInterior()
+                .buildEcoThing()
                 .getHouse();
         System.out.println("\nEco House:");
         System.out.println(ecoHouse);
